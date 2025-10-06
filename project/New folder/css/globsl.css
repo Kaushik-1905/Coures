@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,li{
+    list-style: none;
+}
+
+img{
+    display: block;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+
+:root{
+    --green-900:#20684A;
+    --green-600:#2AB97E;
+    --white-900:white;
+    --white-400:#c3c1c1;
+}

@@ -1,0 +1,21 @@
+/* #### main #### */
+
+main .container {
+    background-image: url(../image/bg1.jpg);
+}
+
+main h1{
+    font-family: var(--oswald);
+    font-size: 48px;
+    color: var(--white-900);
+}
+
+main p{
+    font-family: var(--didat);
+    color: var(--white-900);
+}
+
+main .button a{
+    padding: 12px 24px;
+    color: var(--white-900);
+}

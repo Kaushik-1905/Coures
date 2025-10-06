@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+
+:root {
+    --oswald: "Oswald", sans-serif;
+    --didat: "Didact Gothic", sans-serif;
+}
+
+:root {
+    --white-900: #fff;
+}
