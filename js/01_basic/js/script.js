@@ -98,8 +98,9 @@ let myschool = [
 
 // 
 
-// let shopes = [
-//     {
-//         shopeName:""
-//     }
-// ]
+let shopes = [
+    {
+        mobile:"oneplus",
+        
+    }
+]
