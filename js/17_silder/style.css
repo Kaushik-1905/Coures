@@ -1,0 +1,27 @@
+img{
+    width: 500px;
+    height: 300px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;    
+    background-color: skyblue;
+}
+
+.container{
+    text-align: center;
+    position: relative;
+}
+
+.container #prev{
+    position: absolute;
+    top: 120px;
+    left: 451px;
+}
+
+.container #next{
+    position: absolute;
+    top: 120px;
+    right: 450px;
+}
