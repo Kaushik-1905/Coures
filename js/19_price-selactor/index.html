@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Price Selector</title>
+  <style>
+    .price-filter {
+      max-width: 300px;
+      font-family: Arial, sans-serif;
+    }
+    .price-values {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="price-filter">
+    <div class="price-values">
+      <span id="minVal">$0</span>
+      <span id="maxVal">$500</span>
+    </div>
+
+    <input id="minRange" type="range" min="0" max="500" value="50" step="1">
+    <input id="maxRange" type="range" min="0" max="500" value="300" step="1">
+
+    <p>Selected range: <strong id="result">$50 – $300</strong></p>
+  </div>
+
+  <script>
+    const minRange = document.getElementById("minRange");
+    const maxRange = document.getElementById("maxRange");
+    const result = document.getElementById("result");
+
+    function updateValues() {
+      let min = parseInt(minRange.value);
+      let max = parseInt(maxRange.value);
+
+      if (min > max) [minRange.value, maxRange.value] = [max, min]; // prevent overlap
+      result.textContent = `$${minRange.value} – $${maxRange.value}`;
+    }
+
+    minRange.addEventListener("input", updateValues);
+    maxRange.addEventListener("input", updateValues);
+
+    updateValues();
+  </script>
+</body>
+</html>
