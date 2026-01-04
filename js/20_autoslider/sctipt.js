@@ -9,13 +9,11 @@ function checkPassword() {
 
 function updateRule(id, isValid) {
   const rule = document.getElementById(id);
+  
   if (isValid) {
     rule.textContent = "✔ " + rule.textContent.slice(2);
     rule.style.color = "green";
-  } else {
-    rule.textContent = "❌ " + rule.textContent.slice(2);
-    rule.style.color = "red";
-  }
+  } 
 }
 
 
@@ -23,8 +21,7 @@ function updateRule(id, isValid) {
 function validateUser() {
   const password = document.getElementById("password").value;
 
-  const passwordPattern =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{8,}$/;
+  const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&]).{8,}$/;
 
   if (!passwordPattern.test(password)) {
     alert("Password does not meet the requirements");

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    div {
+
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+
+
+    <script>
+
+        const productData = [{
+            id: 101,
+            image: "https://i.dell.com/is/image/DellContent/content/dam/images/products/electronics-and-accessories/dell/pointing-devices/ms300/ms300-kbm-04-bk.psd?fmt=pjpg&pscan=auto&scl=1&wid=4141&hei=3475&qlt=100,1&resMode=sharp2&size=4141,3475&chrss=full&imwidth=5000",
+            name: "Wireless Mouse",
+            price: 29.99,
+
+        },
+        {
+            id: 102,
+            image: "https://i.rtings.com/assets/pages/xXDZ1p9x/best-rgb-keyboards-20240515-2-medium.jpg?format=auto",
+            name: "Bluetooth Keyboard",
+            price: 49.99,
+        },
+        {
+            id: 103,
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-FBRBZcwzJT5TFrN3ELDZ4LmPVnl6AFCLQ&s",
+            name: "HD Monitor",
+            price: 199.99,
+        }];
+
+
+
+
+        var cart = {};   // key-value cart object
+
+        productData.forEach((val) => {
+            const div = document.createElement("div");
+
+            const img = document.createElement("img");
+            img.src = val.image;
+
+            const name = document.createElement("h2");
+            name.innerText = val.name;
+
+            const price = document.createElement("p");
+            price.innerText = val.price;
+
+            const btn = document.createElement("button");
+            btn.innerText = "Add to Cart";
+
+            // call addToCart when button clicked
+            btn.onclick = () => addToCart(val);
+
+            div.append(img, name, price, btn);
+            document.body.append(div);
+        });
+
+        product = []
+        function addToCart(item) {
+
+            product.push(item);
+
+            // save to localStorage
+            localStorage.setItem("cart", JSON.stringify(product));
+
+            // console.log("Cart:", cart);
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

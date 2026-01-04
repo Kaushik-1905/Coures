@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="">
+        <input type="text" name="username" placeholder="Username" id="name" required><br><br>
+        <input type="text" name="email" placeholder="Email" id="email" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+        const data = JSON.parse(localStorage.getItem("info")) || [];
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            let isMatch = false;
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].name == name && data[i].email == email) {
+                    isMatch = true;
+                     break;
+                }
+            }
+
+            if (isMatch) {
+                alert("Successfully Logged In");
+            } else {
+                alert("Invalid Credentials");
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
