@@ -7,52 +7,97 @@
     <title>Document</title>
 </head>
 
+<style>
+    body{
+        background-color: rgba(220, 220, 220, 0.821);
+    }
+
+</style>
+
+
 <body>
+    <div class="conatiner">
 
-    <form action="">
-        <input type="text" name="username" placeholder="Username" id="name" required><br><br>
-        <input type="text" name="email" placeholder="Email" id="email" required><br><br>
-        <input type="text" name="password" placeholder="Password" id="password" required><br><br>
+        <h2>Registration Page</h2>
+        <form action="">
+            <input type="text" name="username" placeholder="Username" id="name" required><br><br>
+            <input type="text" name="email" placeholder="Email" id="email" required><br><br>
 
+            <input type="text" name="password" placeholder="Password" id="password" required>
+            <ul>
+                <li>One Upper Case</li>
+                <li>One Lower Case</li>
+                <li>One Number</li>
+                <li>One Special Case</li>
+            </ul>
+            <br><br>
 
-        <input type="submit" value="Submit">
-    </form>
+            <input type="submit" value="Submit">
+        </form>
 
-
+    </div>
     <script>
 
         document.querySelector("form").addEventListener("submit", fun)
-        arr = []
+
+        // get existing data from localStorage
+        arr = JSON.parse(localStorage.getItem("info")) || []
 
         function fun(e) {
             e.preventDefault()
 
             var name = document.getElementById("name").value
             var email = document.getElementById("email").value
-            
+            var password = document.getElementById("password").value
 
-            
+            //check registered
+            let alreadyUser = arr.some(user => user.email === email)
+
+            if (alreadyUser) {
+                alert("You are already registered");
+                return;
+            }
+
+            //password validations
+            let hasUpper = /[A-Z]/.test(password);
+            let hasLower = /[a-z]/.test(password);
+            let hasNumber = /\d/.test(password);
+            let hasSpecial = /[^\w\s]/.test(password);
+
+            if (!hasUpper) {
+                alert("Password must contain at least one Uppercase letter");
+                return;
+            }
+            if (!hasLower) {
+                alert("Password must contain at least one Lowercase letter");
+                return;
+            }
+            if (!hasNumber) {
+                alert("Password must contain at least one Number");
+                return;
+            }
+            if (!hasSpecial) {
+                alert("Password must contain at least one Special Character");
+                return;
+            }
 
 
             let obj = {
                 name,
                 email,
-            }   
+            }
 
             arr.push(obj)
-
             localStorage.setItem("info", JSON.stringify(arr));
 
-            alert("Data Stored Successfully");
+            alert("Registration Successful & Data Stored");
 
             console.log(arr);
-
-            relode();
         }
-
-
 
     </script>
 </body>
+
+
 
 </html>

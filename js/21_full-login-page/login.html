@@ -10,38 +10,47 @@
 <body>
 
 
-    <form action="">
-        <input type="text" name="username" placeholder="Username" id="name" required><br><br>
-        <input type="text" name="email" placeholder="Email" id="email" required><br><br>
+   <body>
 
-        <input type="submit" value="Submit">
-    </form>
+<form>
+    <input type="text" id="email" placeholder="Email" required><br><br>
+    <input type="text" id="password" placeholder="Password" required><br><br>
 
+    <input type="submit" value="Login">
+</form>
 
-    <script>
-        const data = JSON.parse(localStorage.getItem("info")) || [];
+<script>
 
-        document.querySelector("form").addEventListener("submit", function (e) {
-            e.preventDefault();
+document.querySelector("form").addEventListener("submit", loginFun)
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
+function loginFun(e) {
+    e.preventDefault()
 
-            let isMatch = false;
+    let email = document.getElementById("email").value
+    let password = document.getElementById("password").value
 
-            for (let i = 0; i < data.length; i++) {
-                if (data[i].name == name && data[i].email == email) {
-                    isMatch = true;
-                     break;
-                }
-            }
+    //localStorage mathi data leva
+    let data = JSON.parse(localStorage.getItem("info"))
 
-            if (isMatch) {
-                alert("Successfully Logged In");
-            } else {
-                alert("Invalid Credentials");
-            }
-        });
+    //storage ma data no hoy to
+    if (!data || data.length == 0) {
+        alert("No user registered. Please register first");
+        return;
+    }
+
+    // check user
+    let userFound = data.some(user => user.email == email)
+
+    if (userFound) {
+        alert("Login Successful");
+    } else {
+        alert("User not registered");
+    }
+}
+
+</script>
+</body>
+
 
     </script>
 
