@@ -33,5 +33,5 @@ function fibonacci(n: number): number[] {
 
     return sequence;
 }
-
+-
 console.log(fibonacci(10));

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <title>Price Selector</title>
@@ -8,16 +9,19 @@
       max-width: 300px;
       font-family: Arial, sans-serif;
     }
+
     .price-values {
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
     }
+
     input[type="range"] {
       width: 100%;
     }
   </style>
 </head>
+
 <body>
   <div class="price-filter">
     <div class="price-values">
@@ -30,6 +34,8 @@
 
     <p>Selected range: <strong id="result">$50 – $300</strong></p>
   </div>
+
+
 
   <script>
     const minRange = document.getElementById("minRange");
@@ -50,4 +56,5 @@
     updateValues();
   </script>
 </body>
+
 </html>
