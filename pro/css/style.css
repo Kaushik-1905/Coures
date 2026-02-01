@@ -1,0 +1,540 @@
+/* #### header #### */
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent; /* or rgba(0,0,0,0.5) */
+    height: 10px;
+}
+
+main {
+    margin-top: 0;
+}
+
+
+header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+
+
+
+
+
+header .drop {
+    position: relative;
+}
+
+header .drop .dropdown {
+    position: absolute;
+    background-color: #272727;
+    display: none;
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px
+}
+
+header .drop:hover .dropdown {
+    display: block;
+}
+
+header .drop .dropdown a {
+    padding: 5px;
+    display: block;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-family:var(--oswald);
+    font-weight: 400;
+}
+
+header .drop .dropdown a:hover {
+    color: #B19777;
+}
+
+
+
+header .drop .dropdown a:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+
+header .proj {
+    position: relative;
+
+}
+
+header .proj .project-dd {
+    position: absolute;
+    background-color: #272727;
+    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: max-content;
+    padding-top: 10px;
+}
+
+header .proj:hover .project-dd {
+    display: block;
+}
+
+header .proj .project-dd a {
+    padding: 5px;
+    display: block;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #999999;
+    font-size: 15px;
+    font-family:var(--oswald);
+    font-weight: 400;
+
+}
+
+header .proj .project-dd a:hover {
+    color: #B19777;
+}
+
+header .proj .project-dd a:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+header .page {
+    position: relative;
+}
+
+header .page .page-dd {
+    position: absolute;
+    background-color: #272727;
+    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: max-content;
+    padding-top: 10px;
+
+}
+
+
+
+header .page:hover .page-dd {
+    display: block;
+}
+
+header .page .page-dd a {
+    display: block;
+
+    padding: 5px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #999999;
+    font-size: 15px;
+    font-family:var(--oswald);
+    font-weight: 400;
+}
+header .page .page-dd a:hover{
+    color: #B19777;
+}
+
+header .page .page-dd a:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+header .blog {
+    position: relative;
+}
+
+header .blog .blog-dd {
+    position: absolute;
+    background-color: #272727;
+    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: max-content;
+    padding-top: 10px;
+}
+
+header .blog .blog-dd a {
+    display: block;
+    padding: 5px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #999999;
+    font-size: 15px;
+    font-family:var(--oswald);
+    font-weight: 400;
+}
+header .blog .blog-dd a:hover{
+    color: #B19777;
+}
+
+header .blog:hover .blog-dd {
+    display: block;
+}
+
+header .blog .blog-dd a:last-child {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+
+/* #### main #### */
+
+main .container {
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+}
+
+main img {
+    height: 100vh;
+}
+
+main .text {
+    margin-bottom: 110px;
+}
+
+main h1 {
+    font-family: var(--oswald);
+    font-size: 48px;
+    color: var(--white-900);
+    letter-spacing: 8px;
+}
+
+main p {
+    font-family: var(--didat);
+    color: var(--white-900);
+}
+
+main .button a {
+    padding: 12px 24px;
+    color: var(--white-900);
+}
+
+
+main .left-panel {
+    background: #272727;
+    position: absolute;
+    width: 143px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+main .left-panel ul {
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 24px;
+}
+
+main .left-panel ul li {
+    padding: 8px 0;
+    margin-bottom: 8px;
+}
+
+main .left-panel ul li i {
+    color: #999;
+}
+
+
+/* #### about #### */
+
+.about {
+    margin: 0 auto;
+    background-color: #272727;
+    padding-bottom: 96px;
+}
+
+.about h2 {
+    padding-top: 96px;
+    color: white;
+    letter-spacing: 8px;
+    font: 40px var(--oswald);
+    font-weight: 400;
+}
+
+.about h2 span {
+    color: #b19777;
+}
+
+.about p {
+    color: #999;
+    font: 18px var(--didat);
+    font-weight: 400;
+}
+
+.about .image {
+    margin-top: 96px;
+    position: relative;
+    border: 2px solid #323232;
+}
+
+
+
+.about .image img {
+    position: relative;
+    top: -25px;
+    left: 25px;
+}
+
+.about .button {
+    color: white;
+    background-color: #323232;
+    display: inline-block;
+    padding: 14px 32px;
+    text-transform: uppercase;
+    font: 400 var(--oswald);
+    letter-spacing: 4px;
+    position: relative;
+    top: -53px;
+    left: 402px;
+}
+
+
+/* #### project #### */
+
+.projects {
+    background-color: #272727;
+}
+
+.projects h2 {
+    font-family: var(--oswald);
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.projects h2 span {
+    color: #b19777
+}
+
+.projects .img img {
+    width: 543px;
+    height: 383px;
+    margin-bottom: 96px;
+
+}
+
+/* #### services ####*/
+
+
+.service {
+    background-color: #272727;
+}
+
+.service h2 {
+    font-family: var(--oswald);
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 8px;
+}
+
+.service h2 span {
+    color: #b19777
+}
+
+.service .img img {
+    width: 60px;
+    height: 42px;
+
+
+}
+
+.service h5 {
+    color: white;
+    font-size: 18px;
+    font-family: var(--oswald);
+    letter-spacing: 5px;
+
+
+}
+
+.service p {
+    color: #999999;
+    font-size: 16px;
+    font-family: var(--didat);
+
+}
+
+.service .service-card .numb {
+    font-size: 50px;
+    font-weight: 600px;
+    color: #999999;
+
+    font-family: var(--oswald);
+}
+
+/* #### news #### */
+
+.news {
+    background-color: #272727;
+}
+
+.news h2 {
+    color: white;
+    letter-spacing: 10px;
+    font-family: var(--oswald);
+    font-size: 40px;
+}
+
+.news h2 span {
+    color: #b19777;
+}
+
+.news .text {
+    background-color: #323232;
+    padding: 20px 15px;
+    margin-bottom: 96px;
+}
+
+.news .text h6 {
+    color: #999;
+    font-family: var(--didat);
+    font-size: 14px;
+}
+
+.news .text h3 {
+    color: #b19777;
+    font-family: var(--oswald);
+    font-size: 25px;
+}
+
+/* #### client-review  ####*/
+
+.client-review {
+    background-image: url(../image/bg2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    /* height: 100vh; */
+}
+
+.client-review .text-box {
+    background-color: #272727;
+    padding: 60px 45px;
+    margin-left: 120px;
+    position: relative;
+    top: 85px;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+.client-review .text-box .img img {
+    height: 55px;
+    width: 55px;
+}
+
+.client-review .text-box h4 {
+    color: white;
+    font-family: var(--oswald);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.client-review .text-box p {
+    color: #999999;
+    margin-bottom: 20px;
+    font-family: var(--didat);
+}
+
+.client-review .text-box h6 {
+    color: #B19777;
+    font-family: var(--didat);
+    padding: 8px 0 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.client-review .text-box span {
+    color: #999999;
+    font-family: var(--didat);
+    font-size: 16px;
+
+}
+
+.client-review .logo {
+    background-color: #323232;
+    max-width: 100%;
+}
+
+.client-review .logo .img img {
+    height: 105px;
+    width: 85px;
+}
+
+footer {
+    background-color: #272727;
+
+}
+
+footer .footer-top {
+    padding: 50px;
+    margin-left: 50px;
+
+
+}
+
+footer .footer-top h4 {
+    color: #B19777;
+    font-size: 16px;
+    font-family: var(--didat);
+
+}
+
+footer .footer-top span {
+    font-size: 16px;
+    color: #999999;
+    font-family: var(--didat);
+}
+
+footer .footer-bottom {
+    margin-left: 50px;
+    padding: 50px;
+}
+
+footer .footer-bottom span {
+    color: #999999;
+    font-size: 14px;
+    font-family: var(--didat);
+
+}
+
+footer .footer-bottom .icon {
+    color: #999;
+    font-size: 19px;
+    /* padding: 0 15px; */
+    border: 1px solid #999;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    padding: 8px 0;
+    margin: 0 10px;
+
+}
+
+footer .footer-bottom .icon i {
+    margin: 0 5px;
+}
+
+footer .active-button i {
+    color: #B19777;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+}

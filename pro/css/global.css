@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none !important;  
+}
+
+img{
+    display: inline-block;
+    width: 100%;
+}
+
+:root{
+    --oswald: "Oswald", sans-serif;
+    --didact-gothic: "Didact Gothic", sans-serif;
+}
+
+ul 
+,li{
+    list-style: none;
+}
